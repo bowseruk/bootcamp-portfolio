@@ -20,7 +20,7 @@ The site does not require installation steps.
 
 The website can be viewed at [https://bowseruk.github.io/bootcamp-portfolio/](https://bowseruk.github.io/bootcamp-portfolio/) with Google Chrome. The source can be viewed in Chrome by right clicking and selecting inspect.
 
-![Screenshot of the webpage](assets/images/screenshot.png)
+![Screenshot of the webpage](images/screenshot.png)
 
 ## Credits
 

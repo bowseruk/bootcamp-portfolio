@@ -21,3 +21,77 @@ h6 {
 p {
   margin: 0;
 }
+
+/* Header */
+header {
+  background-color: rgb(50, 50, 50);
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 0px;
+}
+
+header h1 {
+  background-color: lightblue;
+  padding-left: 50px;
+}
+
+header a {
+  text-decoration: none;
+  margin: 10px auto;
+}
+
+/* Work Flex Grid */
+
+#workGrid {
+  display: grid;
+  grid-template-rows: repeat(3, 200px);
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-areas: 
+  "portfolio1 portfolio1"
+  "portfolio2 portfolio3"
+  "portfolio4 portfolio5";
+}
+
+#portfolio1{
+  grid-area: portfolio1;
+  background-image: url("../images/02-portfolio-1.jpg");
+}
+
+#portfolio2{
+  grid-area: portfolio2;
+  background-image: url("../images/02-portfolio-2.jpg");
+}
+
+#portfolio3{
+  grid-area: portfolio3;
+  background-image: url("../images/02-portfolio-3.jpg");
+}
+
+#portfolio4{
+  grid-area: portfolio4;
+  background-image: url("../images/02-portfolio-4.jpg");
+}
+
+#portfolio5{
+  grid-area: portfolio5;
+  background-image: url("../images/02-run-buddy.jpg");
+}
+
+.workGridArea {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  align-items: center;
+  display: flex;
+  position: relative;
+  border: 5px solid lightblue;
+  margin: 5px;
+}
+
+.workTitle {
+  background-color: lightblue;
+  position: absolute;
+  bottom: 10%;
+  left: 0;
+}
