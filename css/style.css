@@ -54,14 +54,53 @@ header a:hover {
 
 /* Main */
 main {
+  display: grid;
   background-color: lightgray;
   margin: auto;
   padding-bottom: 10px;
+  grid-template-rows: repeat(3, auto);
+  grid-template-columns: 150px 1fr;
+  grid-template-areas:
+  "aboutMe aboutMeContent"
+  "work workContent"
+  "contactMe contactMeContent";
+}
+
+#about {
+  grid-area: aboutMe;
+}
+
+#aboutContent {
+  grid-area: aboutMeContent;
+}
+
+#work h2 {
+  grid-area: work;
+}
+
+#contact {
+  grid-area: contactMe;
+}
+
+#contactContent {
+  grid-area: contactMeContent;
+}
+
+.page-section {
+  margin: 10px;
+}
+
+.sectionHeading {
+  color: darkblue;
+  border-right: 2.5px darkblue solid;
+  padding: 10px 5px 10px 30px;
+  text-align: right;
 }
 
 /* Work Flex Grid */
 
 #workGrid {
+  grid-area: workContent;
   display: grid;
   grid-template-rows: repeat(3, 200px);
   grid-template-columns: repeat(2, 1fr);
@@ -121,4 +160,42 @@ main {
   bottom: 10%;
   left: 0;
   padding: 5px;
+}
+
+@media only screen and (max-width: 750px) {
+  header nav {
+    display: none;
+  }  
+}
+
+@media only screen and (max-width: 600px) {
+  #workGrid {
+    grid-template-rows: repeat(5, 200px);
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-areas: 
+    "portfolio1"
+    "portfolio2"
+    "portfolio3"
+    "portfolio4"
+    "portfolio5";
+  }
+
+  main {
+    grid-template-rows: repeat(6, auto);
+    grid-template-columns: 1fr;
+    grid-template-areas:
+    "aboutMe"
+    "aboutMeContent"
+    "work"
+    "workContent"
+    "contactMe"
+    "contactMeContent";
+  }
+
+  .sectionHeading {
+    border-right: none;
+    border-bottom: 2.5px darkblue solid;
+    padding: 10px;
+    text-align: center;
+  }
 }
