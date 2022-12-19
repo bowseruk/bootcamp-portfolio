@@ -258,6 +258,11 @@ main {
     margin: 5px auto;
   }
 
+  #aboutContent {
+    padding: 5px 10px;
+    text-align: center;
+  }
+
   #workGrid {
     grid-template-rows: repeat(5, 180px);
     grid-template-columns: repeat(1, 1fr);
