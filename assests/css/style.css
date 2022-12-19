@@ -7,9 +7,14 @@ body {
   padding: 0;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   line-height: 1.5;
-  /* background-color: lightgray; */
-  --background-color: lightgray;
-  --banner-color: rgb(50, 50, 50);
+  /* Variables to make editing colour scheme easier */
+  --banner-text-color: #FEFFFF;
+  --background-color: #3AAFA9;
+  --background-text-color: #17252A;
+  --banner-color: #17252A;
+  --panel-color: #287A78;
+  --panel-text-color: #DEF2F1;
+  --link-hover-color: #DEF2F1;
   background-color: var(--background-color);
 
 }
@@ -30,15 +35,15 @@ p {
 /* Header */
 header {
   background-color: var(--banner-color);
-  color: white;
+  color: var(--banner-text-color);
   display: flex;
   justify-content: space-between;
   padding: 20px 0px;
 }
 
 header h1 {
-  background-color: lightblue;
-  color:rgb(50, 50, 50);
+  background-color: var(--panel-color);
+  color:var(--panel-text-color);
   padding: 5px 10px 5px 70px;
 }
 
@@ -49,12 +54,12 @@ header nav {
 header a {
   text-decoration: none;
   font-size: 20px;
-  color: lightblue;
+  color: var(--banner-text-color);
   margin: auto 5px;
 }
 
 header a:hover {
-  color: aqua;
+  color: var(--link-hover-color);
 }
 
 /* Hero banner */
@@ -64,7 +69,6 @@ header a:hover {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  color: white;
   text-align: center;
   align-content: center;
   justify-content: center;
@@ -76,13 +80,14 @@ header a:hover {
   width:100px;
   height:100px;
   margin: auto 10px;
-  border: 3px black solid;
+  border: 3px var(--panel-color) solid;
 }
 
 .hero-banner h2 {
   display: inline-block;
   width: auto;
-  background-color: rgba(0,0,0,0.5);
+  background-color: var(--panel-color);
+  color: var(--panel-text-color);
   padding: 5px;
   margin: auto 10px;
   border-radius: 10px;
@@ -126,19 +131,24 @@ main {
 
 
 #contactContent a {
-  color: darkblue;
+  color: var(--background-text-color);
   text-decoration: none;
   font-size: 20px;
 }
 
+#contactContent a:hover {
+  color: var(--link-hover-color);
+  text-decoration: none;
+  font-size: 20px;
+}
 
 .page-section {
   margin: 10px;
 }
 
 .sectionHeading {
-  color: darkblue;
-  border-right: 2.5px darkblue solid;
+  color: var(--background-text-color);
+  border-right: 2.5px var(--background-text-color) solid;
   padding: 10px 5px 10px 30px;
   text-align: right;
 }
@@ -188,10 +198,12 @@ main {
   align-items: center;
   display: flex;
   position: relative;
-  border: 5px solid lightblue;
+  border: 5px solid var(--panel-color);
   margin: 5px;
+  color: var(--panel-text-color);
   /* Use box shadow to tint box */
-  box-shadow: inset 0 0 0 1000px rgba(0,0,0,.5);
+  box-shadow: inset 0 0 0 1000px rgba(23,37,42,.7);
+  transition: all 0.5s ease-in-out;
 }
 
 /* Remove box-shadow when over work item */
@@ -201,7 +213,7 @@ main {
 
 /* Move the box position and colour it */
 .workTitle {
-  background-color: lightblue;
+  background-color: var(--panel-color);
   position: absolute;
   bottom: 10%;
   left: 0;
@@ -271,7 +283,7 @@ main {
 
   .sectionHeading {
     border-right: none;
-    border-bottom: 2.5px darkblue solid;
+    border-bottom: 2.5px var(--background-text-color) solid;
     padding: 10px;
     text-align: center;
   }
