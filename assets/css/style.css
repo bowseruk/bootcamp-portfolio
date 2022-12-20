@@ -45,6 +45,8 @@ header h1 {
   background-color: var(--panel-color);
   color:var(--panel-text-color);
   padding: 5px 10px 5px 70px;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
 }
 
 header nav {
@@ -241,6 +243,8 @@ main {
 
   header h1 {
     padding: 0px 0px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
   }
 
   header a {
@@ -249,8 +253,6 @@ main {
 
   .hero-banner {
     flex-direction: column;
-    /* align-content: space-between; */
-    /* justify-content: center; */
   }
 
   .hero-banner img, h2 {
